@@ -1,13 +1,13 @@
 //your JS code here. If required.
 
+const output = document.getElementById('output');
 
 const userForm = document.querySelector('form');
 
-userForm.addEventListener("submit", function(){
+userForm.addEventListener("submit", function(e){
+	e.preventDefault();
 	const text = document.getElementById('text').value;
-	const delay = document.getElementById('delay').value;
-
-	const output = document.getElementById('output');
+	const delay = parseInt(document.getElementById('delay').value, 10);
 
 	PrintSomething(text, delay);
 	
